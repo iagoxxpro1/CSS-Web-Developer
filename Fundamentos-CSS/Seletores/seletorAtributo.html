@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Trilha de CSS</title>
+    <style>
+      [title="Netflix"] {
+        color: red;
+      }
+
+      [title~="Streaming"] {
+        background: lightgreen;
+      }
+
+      [href^="https://"] /* ^= é pre-fixo inicio do texto e $= é sufixo final do texto e *= independente da posição*/
+      {
+        background: lightblue;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <ul>
+        <li>
+          <a title="Netflix" href="http://www.netflix.com"> Netflix </a>
+        </li>
+        <li>
+          <a title="Streaming Prime" href="http://www.primevideo.com">
+            Prime Video
+          </a>
+        </li>
+        <li>
+          <a title="Spotify" href="https://www.spotify.com.br"> Spotify </a>
+        </li>
+        <li>
+          <a> Disney Plus </a>
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>
