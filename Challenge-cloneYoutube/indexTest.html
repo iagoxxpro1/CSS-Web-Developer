@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/Challenge-cloneYoutube/index.css" />
+    <style>
+      /* Página Principal */
+      body {
+        margin: 0;
+        font-family: "Roboto", sans-serif;
+        background: #f9f9f9;
+      }
+
+      /* Cabeçalho */
+      .youtube-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 24px;
+        gap: 32px;
+        width: 1440px;
+        height: 56px;
+        background: #ffffff;
+        border-bottom: 1px solid #e0e0e0;
+        position: relative;
+      }
+
+      .left,
+      .center,
+      .right {
+        display: flex;
+        align-items: center;
+      }
+
+      .left {
+        gap: 16px;
+      }
+
+      .menu-icon {
+        font-size: 24px;
+        background: none;
+        border: none;
+        cursor: pointer;
+      }
+
+      .youtube-logo {
+        width: 90px;
+        height: 20px;
+        background: url("/Challenge-cloneYoutube/assets/youtube1.png") no-repeat
+          center;
+      }
+
+      .search-input {
+        width: 404px;
+        height: 40px;
+        gap: 0px;
+        border: 1px 0px 0px 0px;
+        opacity: 0px;
+        border: 1px solid #cccccc;
+      }
+
+      .search-button {
+        width: 57px;
+        height: 40px;
+        border: 1px solid #cccccc;
+        background: #f8f8f8;
+        cursor: pointer;
+      }
+
+      .right {
+        gap: 24px;
+      }
+
+      .upload-icon,
+      .notifications-icon {
+        font-size: 18px;
+        background: none;
+        border: none;
+        cursor: pointer;
+      }
+
+      .profile-icon {
+        width: 34px;
+        height: 34px;
+        border-radius: 50%;
+        background: url("profile.jpg") no-repeat center;
+      }
+
+      /* Sidebar */
+      .sidebar {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        width: 160px;
+        height: 938px;
+        position: absolute;
+        top: 84px;
+        left: 1052px;
+      }
+
+      .video-thumbnail {
+        width: 160px;
+        height: 90px;
+        background: url("image.png") no-repeat center;
+      }
+
+      .video-info {
+        position: absolute;
+        width: 196px;
+        height: 90px;
+        left: 176px;
+        top: 0;
+      }
+
+      .video-title {
+        font-weight: 600;
+        font-size: 14px;
+        color: #000000;
+      }
+
+      .video-channel,
+      .video-views {
+        font-weight: 400;
+        font-size: 12px;
+        color: #515151;
+      }
+
+      /* Assistindo Vídeo */
+      .watching-video {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        position: absolute;
+        width: 952px;
+        height: 746px;
+        left: 75px;
+        top: 84px;
+      }
+
+      .main-video {
+        width: 952px;
+        height: 537px;
+        background: url("image.png") no-repeat center;
+      }
+
+      .video-title-main {
+        font-weight: 600;
+        font-size: 20px;
+        color: #000000;
+      }
+
+      .video-description {
+        font-weight: 400;
+        font-size: 14px;
+        color: #515151;
+        width: 510px;
+      }
+
+      /* Botões de Ações de Vídeo */
+      .video-actions {
+        display: flex;
+        gap: 42px;
+        width: 902px;
+        height: 42px;
+      }
+
+      .channel-info {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+      }
+
+      .channel-avatar {
+        width: 42px;
+        height: 42px;
+        background: url("channels4_profile.jpg") no-repeat center;
+      }
+
+      .subscribe-button {
+        width: 159px;
+        height: 40px;
+        background: #cc0000;
+        color: #ffffff;
+        text-transform: uppercase;
+        border: none;
+        border-radius: 2px;
+        cursor: pointer;
+      }
+    </style>
+    <title>YouTube - assistindo video</title>
+  </head>
+  <body>
+    <header class="youtube-header">
+      <div class="left">
+        <button class="menu-icon">&#9776;</button>
+        <div class="youtube-logo">
+          <img
+            src="/Challenge-cloneYoutube/assets/youtube1.png"
+            alt="youtube-logo"
+          />
+        </div>
+      </div>
+      <div class="center">
+        <input type="text" class="search-input" placeholder="" />
+        <button class="search-button"></button>
+      </div>
+      <div class="right">
+        <button class="upload-icon">&#x1F4E5;</button>
+        <button class="notifications-icon">&#128276;</button>
+        <div class="profile-icon"></div>
+      </div>
+    </header>
+    <div class="sidebar">
+      <!-- Conteúdo da Sidebar -->
+    </div>
+    <div class="watching-video">
+      <div class="main-video"></div>
+      <div class="video-title-main">
+        Semana Front-end | Dia 01: Construindo uma Landing Page no Mundo
+        Invertido com HTML e CSS
+      </div>
+      <div class="video-description">
+        Inicie uma aventura imersiva no mundo do Front-end com HTML e CSS...
+      </div>
+      <div class="video-actions">
+        <!-- Botões de ações do vídeo -->
+      </div>
+      <div class="channel-info">
+        <div class="channel-avatar"></div>
+        <div class="subscribe-button">Inscreva-se</div>
+      </div>
+    </div>
+  </body>
+</html>
