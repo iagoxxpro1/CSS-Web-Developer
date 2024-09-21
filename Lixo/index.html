@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .body {
+        width: 1440px;
+        height: 1024px;
+        top: -512px;
+        left: -720px;
+        gap: 0px;
+        background: #f9f9f9;
+      }
+      .menu {
+        width: 1440px;
+        height: 56px;
+        padding: 0px 24px;
+        gap: 0px;
+        display: flex;
+        justify-content: space-between;
+        background: #ffffff;
+      }
+      .watching-video {
+        width: 952px;
+        height: 746px;
+        top: 84px;
+        left: 75px;
+        gap: 16px;
+      }
+      .sidebar {
+        width: 160px;
+        height: 938px;
+        top: 84px;
+        left: 1052px;
+        gap: 16px;
+      }
+      .left {
+        width: 146px;
+        height: 24px;
+        gap: 0px;
+      }
+      .center {
+        width: 344px;
+        height: 40px;
+        border-top: 1px solid #cccccc;
+      }
+      .right {
+        width: 130px;
+        height: 34px;
+        gap: 24px;
+      }
+      .youtube1 {
+        width: 90px;
+        height: 20px;
+        top: 18px;
+        left: 80px;
+        gap: 0px;
+      }
+      .menu .menu {
+        width: 24px;
+        height: 24px;
+        top: 16px;
+        left: 24px;
+        padding: 6px 3px;
+        gap: 0px;
+      }
+      .menu-vector1,
+      .menu-vector2,
+      .menu-vector3 {
+        width: 18px;
+        height: 2px; /* Ajuste para criar uma linha visível */
+        background-color: #000000;
+        position: absolute;
+        left: 3px;
+      }
+      .menu-vector1 {
+        top: 6px; /* Primeira linha */
+      }
+      .menu-vector2 {
+        top: 12px; /* Segunda linha */
+      }
+      .menu-vector3 {
+        top: 18px; /* Terceira linha */
+      }
+      .search {
+        width: 24px;
+        height: 24px;
+        top: 16px;
+        left: 887px;
+        position: absolute; /* Adicionado para o uso de 'top' e 'left' */
+      }
+
+      .search-retangulo2 {
+        display: flex;
+        width: 57px;
+        height: 42px;
+        top: 8px;
+        left: 873px;
+        opacity: 0;
+        position: absolute; /* Adicionado para o uso de 'top' e 'left' */
+        background: #f8f8f8;
+        border: 1px solid #cccccc; /* Removido o 'border' duplicado */
+      }
+
+      .search-retangulo1 {
+        width: 348px;
+        height: 40px;
+        top: 8px;
+        left: 526px;
+        position: absolute; /* Adicionado para o uso de 'top' e 'left' */
+        background: #ffffff;
+        border: 1px solid #cccccc; /* Removido o 'border' duplicado */
+      }
+      .search-vector1 {
+        width: 4.35px;
+        height: 4.35px;
+        top: 16.65px;
+        left: 16.65px;
+        position: absolute; /* Adicionado para que top e left funcionem */
+        border: 1px solid #000000; /* Correção do uso de border */
+      }
+
+      .search-vector2 {
+        width: 16px;
+        height: 16px;
+        top: 3px;
+        left: 3px;
+        position: absolute; /* Adicionado para que top e left funcionem */
+        border: 1px solid #000000;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="menu">
+      <div class="left">
+        <img src="/Lixo/youtube1.png" alt="logo do youtube" class="youtube1" />
+        <div class="menu">
+          <span class="menu-vector1"></span><span class="menu-vector2"></span
+          ><span class="menu-vector3"></span>
+        </div>
+      </div>
+      <div class="center">
+        <button class="search">
+          <span class="search-vector1"></span
+          ><span class="search-vector2"></span>
+        </button>
+        <span class="search-retangulo2"></span>
+        <input type="text" class="search-retangulo1" />
+      </div>
+      <div class="right"></div>
+    </div>
+    <div class="watching-video"></div>
+    <div class="sidebar"></div>
+  </body>
+</html>
