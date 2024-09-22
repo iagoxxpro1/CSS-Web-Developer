@@ -1,0 +1,182 @@
+/* Cabeçalho */
+.youtube-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 24px;
+  gap: 32px;
+  width: 100%;
+  max-width: 1440px;
+  background: #ffffff;
+  border-bottom: 1px solid #e0e0e0;
+  position: relative;
+}
+
+.left,
+.center,
+.right {
+  display: flex;
+  align-items: center;
+}
+
+.left {
+  gap: 16px;
+}
+
+.menu-icon {
+  font-size: 24px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.youtube-logo {
+  width: 90px;
+  height: 20px;
+  background: url("/Challenge-cloneYoutube/assets/youtube1.png") no-repeat
+    center;
+}
+
+.search-input {
+  width: 404px;
+  height: 40px;
+  gap: 0px;
+  border: 1px 0px 0px 0px;
+  border: 1px solid #cccccc;
+}
+
+.search-button {
+  width: 57px;
+  height: 44px;
+  border: 1px solid #cccccc;
+  background: #f8f8f8;
+  cursor: pointer;
+}
+
+.right {
+  gap: 24px;
+}
+
+.upload-icon,
+.notifications-icon {
+  font-size: 18px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.profile-icon {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: url("/Challenge-cloneYoutube/assets/Avatar.png") no-repeat center;
+}
+
+.sidebar {
+  /* Sidebar */
+
+  /* Auto layout */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 24px;
+  gap: 22px;
+
+  position: absolute;
+  width: auto;
+  height: 100vh;
+  /* Faz a sidebar ocupar a altura completa da tela */
+  left: 0px;
+  top: 56px;
+
+  background: #ffffff;
+}
+
+.menu-item {
+  display: flex;
+  align-items: center;
+  /* Alinha o ícone e o texto verticalmente */
+  gap: 8px;
+  /* Espaço entre o ícone e o texto */
+  width: auto;
+  /* Remove a restrição de largura */
+}
+
+.sidebar-text {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  color: #000000;
+}
+
+/* Grade de vídeos */
+.video-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  /* Faz uma grade responsiva */
+  gap: 20px;
+  padding: 24px;
+  margin-left: 240px;
+  /* Para compensar a sidebar */
+}
+
+.video-item {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 282px;
+  height: 262px;
+  top: 80px;
+  left: 246px;
+  padding: 16px 0 0 0;
+  gap: 16px;
+  border-radius: 4px 0 0 0;
+  /*position: absolute;*/
+}
+
+.video-item img {
+  width: 100%;
+  /* Ocupa a largura total do item */
+  height: auto;
+}
+
+.video-detail {
+  display: flex;
+  flex-direction: row;
+  /* Mantém o avatar e o texto lado a lado */
+  align-items: center;
+  gap: 12px;
+  /* Espaçamento entre o avatar e o texto */
+  width: 100%;
+}
+
+.video-detail img {
+  width: 42px;
+  height: 42px;
+  gap: 0px;
+}
+
+.video-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.titulo {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  color: #000000;
+  margin: 0;
+  line-height: 20px;
+}
+
+.visualizacoes {
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: #606060;
+  margin-top: 4px;
+  line-height: 16px;
+}
