@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discord Home Page</title>
+    <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Open+Sans:wght@400&display=swap"
+        rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            max-width: 100%;
+            margin: 0 auto;
+            background: #FFFFFF;
+            font-family: 'Open Sans', sans-serif;
+            padding: 0 20px;
+        }
+
+        header {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            gap: 16px;
+
+            width: 1280px;
+            margin: 40px auto;
+            padding: 20px;
+
+            height: 459px;
+            background-image: url(assets/Header-Background.png);
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+
+        .header-content {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 24px;
+            width: 757px;
+            height: 270px;
+            left: 261px;
+            top: 94px;
+            text-align: center;
+            padding: 0 20px;
+        }
+
+        .header-content h1 {
+            font-family: 'Luckiest Guy';
+            font-weight: 400;
+            font-size: 56px;
+            line-height: 56px;
+            text-align: center;
+            color: #FFFFFF;
+        }
+
+        .header-content p {
+            font-family: 'Open Sans', sans-serif;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 22px;
+            text-align: center;
+            color: #FFFFFF;
+        }
+
+        .header-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 16px;
+            width: 502px;
+            height: 44px;
+        }
+
+        .baixar-windows,
+        .abra-discord {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Open Sans', sans-serif;
+            font-weight: 400;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 28px;
+            border: none;
+            padding: 0 20px;
+        }
+
+        .baixar-windows {
+            background: #FFFFFF;
+            color: #23272A;
+            width: 205px;
+            height: 44px;
+        }
+
+        .abra-discord {
+            background: #23272A;
+            color: #FFFFFF;
+            width: 281px;
+            height: 44px;
+        }
+
+        .section2,
+        .section3,
+        .section4 {
+            width: 100%;
+            max-width: 1280px;
+            height: auto;
+            padding: 40px 20px;
+            background: #F6F6F6;
+            margin: 40px auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 16px;
+        }
+
+
+        .section1-Image,
+        .section2-image,
+        .section3-image {
+            width: 100%;
+            max-width: 607px;
+            height: auto;
+            /* Garante que a altura seja proporcional */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        .section1-text,
+        .section2-text,
+        .section3-text,
+        .section4-text {
+            text-align: center;
+            max-width: 348px;
+            /* Limita a largura máxima */
+            padding-left: 20px;
+        }
+
+        .section1 {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            gap: 16px;
+
+            width: 1280px;
+            margin: 40px auto;
+            padding: 20px;
+        }
+
+
+        .section1-Image {
+            width: 607px;
+            height: 394px;
+            background: url(assets/Section1-Image.png);
+            background-size: cover;
+        }
+
+        .section1-text {
+            width: 348px;
+            height: 374px;
+            display: flex;
+            text-align: center;
+            flex-direction: column;
+            justify-content: flex-start;
+        }
+
+        .section1-text h1 {
+            font-family: 'Open Sans', sans-serif;
+            font-weight: 800;
+            font-size: 40px;
+            line-height: 54px;
+            color: #23272A;
+            margin-bottom: 16px;
+        }
+
+        .section1-text p {
+            font-family: 'Open Sans', sans-serif;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 22px;
+            color: #23272A;
+        }
+
+        .section2 {
+            /* Auto layout */
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            padding: 0px;
+            gap: 16px;
+
+            width: 1280px;
+            height: 448px;
+            top: 933px;
+
+            background: #F6F6F6;
+        }
+
+        .section2-text {
+            width: 351px;
+            height: 212px;
+            padding-left: 20px;
+            /*ajusta a distância do conteúdo, é melhor que usar "position absolute" causa problema de alinhamento*/
+
+
+            /* Inside auto layout */
+            flex: none;
+            order: 0;
+            flex-grow: 0;
+        }
+
+        .section2-text p {
+            width: 348px;
+            height: 88px;
+            left: 156px;
+            top: 242px;
+
+            font-family: 'Open Sans';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 22px;
+
+            color: #23272A;
+        }
+
+        .section2-text h1 {
+            width: 329px;
+            height: 108px;
+            left: 153px;
+            top: 118px;
+            margin-bottom: 16px;
+            /*espaçamento entre o titulo e o paragrafo*/
+
+            font-family: 'Open Sans';
+            font-style: normal;
+            font-weight: 800;
+            font-size: 40px;
+            line-height: 54px;
+
+            color: #23272A;
+        }
+
+        .section2-image {
+            width: 607px;
+            height: 394px;
+
+            background: url(assets/section2-image.png);
+
+            /* Inside auto layout */
+            flex: none;
+            order: 1;
+            flex-grow: 0;
+        }
+
+        .section3 {
+            /* Auto layout */
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            padding: 0px;
+            gap: 16px;
+
+            width: 1280px;
+            height: 448px;
+            top: 1421px;
+        }
+
+        .section3-image {
+            width: 607px;
+            height: 394px;
+
+            background: url(assets/section3-image.png);
+
+            /* Inside auto layout */
+            flex: none;
+            order: 0;
+            flex-grow: 0;
+        }
+
+        .section3-text {
+            width: 351px;
+            height: 234px;
+            padding-left: 20px;
+
+
+            /* Inside auto layout */
+            flex: none;
+            order: 1;
+            flex-grow: 0;
+        }
+
+        .section3-text p {
+            width: 348px;
+            height: 110px;
+            left: 779px;
+            top: 231px;
+
+            font-family: 'Open Sans';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 22px;
+
+            color: #23272A;
+        }
+
+        .section3-text h1 {
+            width: 329px;
+            height: 108px;
+            left: 776px;
+            top: 107px;
+            margin-bottom: 16px;
+
+            font-family: 'Open Sans';
+            font-style: normal;
+            font-weight: 800;
+            font-size: 40px;
+            line-height: 54px;
+
+            color: #23272A;
+        }
+
+        .section4 {
+            /* Auto layout */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 40px 20px;
+            gap: 16px;
+
+            width: 1280px;
+            height: 744px;
+            top: 1909px;
+
+            background: #F6F6F6;
+        }
+
+        .section4-text {
+            text-align: center;
+            padding: 20px;
+            max-width: 1280px;
+        }
+
+        .section4-text h1 {
+            height: 80px;
+            margin-bottom: 16px;
+
+            font-family: 'Luckiest Guy';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 40px;
+            line-height: 40px;
+            text-align: center;
+
+            color: #23272A;
+
+
+            /* Inside auto layout */
+            flex: none;
+            order: 0;
+            flex-grow: 0;
+        }
+
+        .section4-text p {
+            height: 44px;
+
+            font-family: 'Open Sans';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 22px;
+            text-align: center;
+
+            color: #23272A;
+
+
+            /* Inside auto layout */
+            flex: none;
+            order: 1;
+            flex-grow: 0;
+        }
+
+        .section4-image {
+            max-width: 784px;
+            width: 100%;
+            height: 508px;
+
+            background: url(assets/section4-image.png);
+
+            /* Inside auto layout */
+            flex: none;
+            order: 2;
+            flex-grow: 0;
+        }
+
+        footer {
+            background-image: url(assets/footer.png);
+            max-width: 1280px;
+            height: 134px;
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0 auto;
+        }
+
+        @media (max-width: 768px) {
+
+            header,
+            .header-content,
+            .section1,
+            .section2,
+            .section3,
+            .section4 {
+                flex-direction: column;
+                text-align: center;
+                padding: 0 20px;
+                max-width: 100%;
+                /* Ajuste para a largura total da tela */
+            }
+
+            .header-content {
+                width: 100%;
+                padding: 0 10px;
+                margin-bottom: 40px;
+                /* Adiciona espaçamento extra abaixo do conteúdo */
+            }
+
+            .header-content h1,
+            .section1-text h1,
+            .section2-text h1,
+            .section3-text h1,
+            .section4-text h1 {
+                font-size: 28px;
+                /* Reduz o tamanho da fonte para melhor ajuste */
+                line-height: 34px;
+            }
+
+            .header-content p,
+            .section1-text p,
+            .section2-text p,
+            .section3-text p,
+            .section4-text p {
+                font-size: 14px;
+                /* Tamanho da fonte menor para melhor legibilidade */
+                line-height: 20px;
+                margin-bottom: 20px;
+                /* Adiciona espaço extra entre os parágrafos e botões */
+            }
+
+            .header-buttons {
+                display: flex;
+                flex-direction: column;
+                /* Organiza os botões em coluna */
+                align-items: center;
+                /* Centraliza os botões */
+                gap: 16px;
+                /* Espaçamento entre os botões */
+                width: 100%;
+                /* Ocupa toda a largura disponível */
+            }
+
+            .baixar-windows,
+            .abra-discord {
+                width: 90%;
+                /* Define a largura dos botões */
+                max-width: none;
+                /* Remove qualquer limite de largura */
+                margin: 8px 0;
+                /* Espaçamento entre os botões */
+                padding: 12px 0;
+                /* Ajusta a altura dos botões para melhor aparência */
+                text-align: center;
+                /* Centraliza o texto nos botões */
+            }
+
+            .section1-Image,
+            .section2-image,
+            .section3-image,
+            .section4-image {
+                max-width: 100%;
+                /* Garante que as imagens ocupem toda a largura da tela */
+            }
+
+            .section1-text,
+            .section2-text,
+            .section3-text,
+            .section4-text {
+                max-width: 100%;
+                /* Texto ajustado à largura total */
+                text-align: center;
+                /* Centraliza o texto */
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="header-content">
+            <h1>IMAGINE UM LUGAR...</h1>
+            <p>…onde você possa pertencer a um clube escolar, um grupo de gamers, ou uma comunidade artística mundial.
+                Onde você e alguns amigos possam passar um tempo juntos. Um lugar que torna fácil conversar todos os
+                dias e socializar com mais frequência.</p>
+            <div class="header-buttons">
+                <button class="baixar-windows">
+                    <span>Baixar para Windows</span>
+                </button>
+                <button class="abra-discord">
+                    <span>Abra o Discord no seu navegador</span>
+                </button>
+            </div>
+        </div>
+    </header>
+    <section class="section1">
+        <div class="section1-Image"></div>
+        <div class="section1-text">
+            <h1>Crie um espaço controlado por convite onde você se sinta em casa</h1>
+            <p>Os servidores Discord são organizados em canais com assuntos para vocês colaborarem, compartilharem ou
+                simplesmente falarem do dia sem entupir um chat geral.</p>
+        </div>
+    </section>
+    <section class="section2">
+        <div class="section2-image"></div>
+        <div class="section2-text">
+            <h1>Aqui é fácil se encontrar</h1>
+            <p>Entre no canal de voz quando estiver à toa. Amigos no mesmo servidor podem te ver e entrar imediatamente,
+                sem nem ter que fazer a chamada.</p>
+        </div>
+    </section>
+    <section class="section3">
+        <div class="section3-image"></div>
+        <div class="section3-text">
+            <h1>Para poucos e para muitos</h1>
+            <p>Organize qualquer comunidade com ferramentas de moderação e acesso personalizado a membros. Dê poderes
+                especiais aos membros, monte canais privados e muito mais.</p>
+        </div>
+    </section>
+    <section class="section4">
+        <div class="section4-image"></div>
+        <div class="section4-text">
+            <h1>TECNOLOGIA DE CONEXÃO CONFIÁVEL</h1>
+            <p>Voz e vídeo de baixa latência, para você conversar como se estivesse na mesma sala. Dê um joinha por
+                vídeo, veja amigos transmitirem a jogatina do dia ou junte uma galera pra desenhar na tela
+                compartilhada.</p>
+        </div>
+    </section>
+    <footer></footer>
+</body>
+
+</html>
