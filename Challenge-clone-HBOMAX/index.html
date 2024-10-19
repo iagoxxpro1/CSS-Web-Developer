@@ -336,6 +336,73 @@
             font-size: 2rem;
             margin: 0 8px 0 0;
         }
+
+        .contents {
+            margin: 100px auto;
+        }
+
+        section {
+            scroll-margin-top: 80px;
+        }
+
+        .title {
+            font-size: 2rem;
+            font-weight: 500;
+        }
+
+        .contents-container {
+            margin-top: 40px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+        }
+
+        .contents-card {
+            border-radius: 16px;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            border: 2px solid transparent;
+            transition: transform 0.8s, background 0.8s, border 1s;
+        }
+
+        .contents-image {
+            width: 100%;
+            object-fit: cover;
+            object-position: center;
+            transition: opacity 2s;
+        }
+
+        img {
+            overflow-clip-margin: content-box;
+            overflow: clip;
+        }
+
+        .footer-link {
+            font-family: "Raleway", sans-serif;
+            font-weight: bold;
+            color: var(--link-color);
+            text-transform: uppercase;
+            text-decoration: none;
+            margin: 0 14px;
+            letter-spacing: 2px;
+            transition: color 0.5s;
+            font-size: 0.875rem;
+        }
+
+        .footer-legal {
+            font-size: 0.75rem;
+            margin: 16px 0;
+            color: var(--link-color);
+        }
+
+        .footer-social {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 40px;
+            margin-top: 80px;
+        }
     </style>
 </head>
 
@@ -344,7 +411,7 @@
         <img src="assets/images/hbo-logo.svg" alt="logo da HBO" class="menu-logo">
         <div>
             <a href="signin.html" class="menu-item">Entrar</a>
-            <a href="subscription.html" class="menu-item menu-item--button button">Assine agora</a>
+            <a href="#subscription" class="menu-item menu-item--button button">Assine agora</a>
         </div>
     </nav>
     <header class="header">
@@ -423,8 +490,51 @@
                 </div>
             </div>
         </section>
+        <section id="contents" class="contents container">
+            <h2 class="title">Descubra novos universos</h2>
+            <div class="contents-container">
+                <div class="contents-card"><img class="contents-image" src="assets/images/hbo-default_0.webp" alt="HBO">
+                </div>
+                <div class="contents-card"><img class="contents-image" src="assets/images/MAX-Default.webp"
+                        alt="Max Original"></div>
+                <div class="contents-card"><img class="contents-image" src="assets/images/DC_Default.webp" alt="DC">
+                </div>
+                <div class="contents-card"><img class="contents-image" src="assets/images/WB-Default.webp"
+                        alt="Warner Bross"></div>
+                <div class="contents-card"><img class="contents-image" src="assets/images/CN-Default.webp"
+                        alt="Cartoon Network"></div>
+                <div class="contents-card"><img class="contents-image" src="assets/images/UCL-Default.webp"
+                        alt="UEFA Champion"></div>
+            </div>
+        </section>
     </main>
-    <footer></footer>
+    <footer class="footer container">
+        <div>
+            <a class="footer-link" href="">Agora na HBO Max</a>
+            <a class="footer-link" href="">Em breve</a>
+            <a class="footer-link" href="">Filme em destaque</a>
+            <a class="footer-link" href="">Séries</a>
+            <a class="footer-link" href="">AJuda</a>
+        </div>
+        <p class="text--small footer-legal">
+            © 2022 WarnerMedia Direct Latin America, LLC. Todos os direitos
+            reservados. HBO Max é usado sob licença.
+        </p>
+        <div class="footer-social">
+            <a href="https://www.facebook.com/HBOMaxBr/" class="footer-social-link">
+                <img src="assets/images/fb_0.png" alt="Facebook">
+            </a>
+            <a href="https://twitter.com/HBOMaxBR" class="footer-social-link">
+                <img src="assets/images/twitter_0.png" alt="Twitter">
+            </a>
+            <a href="https://www.instagram.com/hbomaxbr/" class="footer-social-link">
+                <img src="assets/images/instagram_0.png" alt="Instagram">
+            </a>
+            <a href="https://www.youtube.com/c/hbomaxbr" class="footer-social-link">
+                <img src="assets/images/youtube_0.png" alt="Youtube">
+            </a>
+        </div>
+    </footer>
 </body>
 
 </html>
